@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem "twitter-bootstrap-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -31,11 +31,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+	#Use sqlite as database for Active Record (devlopement, test)
+	gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
 
 group :development do
+	#Use postgres as database for Active Record (production)
+	gem 'pg'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
