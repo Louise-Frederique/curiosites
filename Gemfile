@@ -4,8 +4,6 @@ gem "twitter-bootstrap-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,9 +35,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-group :development do
+group :production do
 	#Use postgres as database for Active Record (production)
-	gem 'pg'
+  gem 'pg'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
